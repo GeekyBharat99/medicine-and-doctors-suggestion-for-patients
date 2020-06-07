@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<header id="hs_header">
+  <div class="container">
+
+  </div>
+
+</header>
+    <center style="padding-top: 5%">
+        <h2>Create New Account</h2>
+        <br>
+        <form style="width: 40%;" method="post" action="">
+            {% csrf_token %}
+            {% if error %}<p style="color: red">This Username already Exist.</p>{% endif %}
+            <label>Username:</label>
+            <input type="text" name="un" placeholder="Username" class="form-control" required><br>
+
+            <label>Email:</label>
+            <input type="email" name="email" placeholder="Email" class="form-control" required><br>
+
+
+            <label>Password:</label>
+            <input type="password" name="ps" placeholder="Password" class="form-control" required><br>
+
+
+            <label>Number:</label>
+            <input type="number" name="number" placeholder="Mobile Number" class="form-control" required><br>
+
+
+            <input class="btn btn-info" type="submit" value="Sign Up" >
+
+        </form>
+        <br>
+<h2>
+    Already have an account?<a href="{% url 'login' %}">Login</a>
+</h2>
+        <a href="{% url 'Doctors_registration' %}"> <h2 class="btn btn-primary">Register as a Doctor</h2> </a>
+
+        <br>
+        <br>
+
+
+    </center>
+{% endblock %}

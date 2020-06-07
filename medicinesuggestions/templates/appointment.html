@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<header id="hs_header">
+  <div class="container">
+
+  </div>
+
+</header>
+    <center style="padding-top: 5%">
+        <h2>Book An Appointment</h2>
+        <br>
+        <form style="width: 40%;" method="post" action="">
+            {% csrf_token %}
+            <label>Your Name:</label>
+            <input type="text" name="un" placeholder="Name" class="form-control" required><br>
+            <label>Time You Want:</label>
+            <input type="time" name="time" placeholder="Enter The Time Slot You Want" class="form-control" required><br>
+            <input class="btn btn-info" type="submit" value="Submit" >
+
+        </form>
+        <br>
+
+
+    </center>
+{% endblock %}

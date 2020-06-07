@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<header id="hs_header">
+  <div class="container">
+
+  </div>
+
+</header>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Message</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  {% for i in data %}
+    <tr>
+      <th scope="row">{{ forloop.counter }}</th>
+      <td>{{ i.name }}</td>
+      <td>{{ i.email }}</td>
+      <td>{{i.message}}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}

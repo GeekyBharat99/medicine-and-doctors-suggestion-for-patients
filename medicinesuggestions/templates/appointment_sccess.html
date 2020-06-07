@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<header id="hs_header">
+  <div class="container">
+
+  </div>
+
+</header>
+
+<div class="container" style="padding-top: 25px">
+<div class="jumbotron">
+    <br><br>
+  <h1 class="display-4">You made an appointment successfully.</h1>
+<br>
+  <a class="btn btn-primary btn-lg" href="{% url 'home' %}" role="button">Go back To Home</a>
+</div>
+</div>
+
+
+{% endblock %}

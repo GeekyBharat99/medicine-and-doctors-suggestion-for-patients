@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+
+<body>
+<!--header start-->
+
+<header id="hs_header">
+  <div class="container">
+
+  </div>
+
+</header>
+<!--header end-->
+<div class="hs_page_title">
+  <div class="container">
+    <h3>Services</h3>
+    <ul>
+      <li><a href="i{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'services' %}">Services</a></li>
+    </ul>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+	  <div class="col-md-12 align-c pull-down-62 hs_portfolio index_portfolio">
+		<!-- /.title -->
+		<h4 class="hs_heading">Services Available</h4>
+		<ul class="push-down-62 portfolio-filter" data-scrollreveal="enter from the bottom over 1s but wait 0.5s">
+		  <li><a href="#" class="filter-item active" data-filter="all">All Services</a></li>
+		  <li><a href="#" class="filter-item" data-filter="Pediatric">Pediatric Clinic</a></li>
+		  <li><a href="#" class="filter-item" data-filter="Cancer">Cancer Care</a></li>
+		  <li><a href="#" class="filter-item" data-filter="General">General Surgery</a></li>
+		  <li><a href="#" class="filter-item" data-filter="Physiotherapy">Physiotherapy</a></li>
+		</ul>
+		<!-- /.push-down-62 portfolio-filter -->
+	  </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="row push-down-62 portfolio-grid service_grid index_portfolio_content" id="grid">
+    <div class="col-md-4 col-sm-6 Pediatric Cancer mix">
+		<div class="portfolio-item">
+		  <img src="{% static 'images/portfolio/portfolio1.jpg' %}" alt=""/>
+		  <h3>Pediatric Clinic</h3>
+		  <div class="portfolio-details">
+			<h4>Pediatric Clinic</h4>
+
+</div>
+		</div>
+    </div>
+    <!-- /.col-md-4 portfolio-item mix -->
+    <div class="col-md-4 col-sm-6 Cancer General mix">
+		<div class="portfolio-item">
+		  <img src="{% static 'images/portfolio/portfolio2.jpg' %}" alt=""/>
+		  <h3>Dental Clinic</h3>
+		  <div class="portfolio-details">
+			<h4>Dental Clinic</h4>
+		  </div>
+		</div>
+    </div>
+    <!-- /.col-md-4 portfolio-item mix -->
+    <div class="col-md-4 col-sm-6 General Physiotherapy printing mix">
+		<div class="portfolio-item">
+		  <img src="{% static 'images/portfolio/portfolio3.jpg' %}" alt=""/>
+		  <h3>General Surgery</h3>
+		  <div class="portfolio-details">
+			<h4>General Surgery</h4>
+				  </div>
+		</div>
+    </div>
+    <!-- /.col-md-4 portfolio-item mix -->
+    <div class="col-md-4 col-sm-6 Cancer printing Physiotherapy mix">
+		<div class="portfolio-item">
+		  <img src="{% static 'images/portfolio/portfolio4.jpg' %}" alt=""/>
+		  <h3>Physiotherapy</h3>
+		  <div class="portfolio-details">
+			<h4>Physiotherapy</h4>
+
+		  </div>
+		</div>
+    </div>
+    <!-- /.col-md-4 portfolio-item mix -->
+    <div class="col-md-4 col-sm-6 Pediatric Cancer mix">
+    <div class="portfolio-item">
+	  <img src="{% static 'images/portfolio/portfolio5.jpg' %}" alt=""/>
+      <h3>Emergency Services</h3>
+      <div class="portfolio-details">
+        <h4>Emergency Services</h4>
+         </div>
+    </div>
+    </div>
+    <!-- /.col-md-4 portfolio-item mix -->
+    <div class="col-md-4 col-sm-6 Pediatric Cancer Physiotherapy mix">
+		<div class="portfolio-item">
+		  <img src="{% static 'images/portfolio/portfolio6.jpg' %}" alt=""/>
+		  <h3>Pregnancy Care</h3>
+		  <div class="portfolio-details">
+			<h4>Pregnancy Care</h4> </div>
+		</div>
+    </div>
+    <!-- /.col-md-4 portfolio-item mix -->
+    <div class="col-md-4 col-sm-6 Cancer printing Physiotherapy mix">
+		<div class="portfolio-item">
+		  <img src="{% static 'images/portfolio/portfolio7.jpg' %}" alt=""/>
+		  <h3>Cancer Care</h3>
+		  <div class="portfolio-details">
+			<h4>Cancer Care</h4> </div>
+		</div>
+    </div>
+    <!-- /.col-md-4 portfolio-item mix -->
+    <div class="col-md-4 col-sm-6 Pediatric Cancer mix">
+		<div class="portfolio-item">
+		  <img src="{% static 'images/portfolio/portfolio8.jpg' %}" alt=""/>
+		  <h3>Occupational Therapy</h3>
+		  <div class="portfolio-details">
+			<h4>Occupational Therapy</h4> </div>
+		</div>
+    </div>
+    <!-- /.col-md-4 portfolio-item mix -->
+    <div class="col-md-4 col-sm-6 Pediatric Cancer Physiotherapy mix">
+		<div class="portfolio-item">
+		  <img src="{% static 'images/portfolio/portfolio9.jpg' %}" alt=""/>
+		  <h3>Ward</h3>
+		  <div class="portfolio-details">
+			<h4>Ward</h4> </div>
+		</div>
+    </div>
+    <!-- /.col-md-4 portfolio-item mix -->
+  </div>
+
+  <!--Patients Testimonials start-->
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <h4 class="hs_heading">Patients Testimonials</h4>
+      <div class="patients_testimonials">
+        <div id="patients_testimonials_slider" class="owl-carousel owl-theme">
+          <div class="patients_testimonials_slider_item"> <img class="pull-left" src="{% static 'images/testimonial/patients_testimonials.png' %}" alt="" width="120" height="130" />
+            <h4>Neil patel</h4>
+            <p>Presently I stroll with individuals as a typical individual, not as somebody who is distinctive regarding appearance or wellbeing.</p>
+          </div>
+          <div class="patients_testimonials_slider_item"> <img class="pull-left" src="{% static 'images/testimonial/patients_testimonials1.png' %}" alt="" width="120" height="130" />
+            <h4>kumar Siddharth</h4>
+            <p>I'm unquestionably not one to perspire the little stuff any longer. I can't portray that it is so incredible to have the option to return home to your significant other, children and family and return to typical life.</p>
+          </div>
+          <div class="patients_testimonials_slider_item"> <img class="pull-left" src="{% static 'images/testimonial/patients_testimonials.png' %}" alt="" width="120" height="130" />
+            <h4>Anshul Sharma</h4>
+            <p>As an entrepreneur and father of two dynamic young little girls, the idea of such obtrusive medical procedure and possibly troublesome recuperation was very worried to me.</p>
+          </div>
+          <div class="patients_testimonials_slider_item"> <img class="pull-left" src="{% static 'images/testimonial/patients_testimonials1.png' %}" alt="" width="120" height="130" />
+            <h4>Ronny Gupta</h4>
+            <p>There was an agony under my shoulder bone that emanated into my back. Since I have a family ancestry of coronary episode, I thought without a doubt I was set out toward one.</p>
+          </div>
+        </div>
+        <div class="customNavigation text-right"> <a class="btn_prev prev"><i class="fa fa-chevron-left"></i></a> <a class="btn_next next"><i class="fa fa-chevron-right"></i></a> </div>
+      </div>
+    </div>
+  </div>
+  <!--Patients Testimonials end-->
+  <div class="hs_margin_30"></div>
+</div>
+
+{% endblock %}

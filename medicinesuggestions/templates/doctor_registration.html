@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<header id="hs_header">
+  <div class="container">
+
+  </div>
+
+</header>
+    <center style="padding-top: 5%">
+        <h2>Register as a Doctor</h2>
+        <br>
+        <form style="width: 40%;" method="post" action="">
+            {% csrf_token %}
+            {% if error %}<p style="color: red">This Username already Exist.</p>{% endif %}
+            <label>Name:</label>
+            <input type="text" name="name" placeholder="Name" class="form-control" required><br>
+
+
+
+            <label>specialist:</label>
+            <input type="text" name="disease" placeholder="Enter your field of Speciality" class="form-control" required><br>
+
+
+            <label>Email:</label>
+            <input type="email" name="email" placeholder="Email" class="form-control" required><br>
+
+
+            <label>Number:</label>
+            <input type="number" name="number" placeholder="Mobile Number" class="form-control" required><br>
+
+
+            <input class="btn btn-info" type="submit" value="Register" >
+
+        </form>
+        <br>
+
+    </center>
+{% endblock %}

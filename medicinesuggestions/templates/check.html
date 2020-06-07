@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<header id="hs_header">
+  <div class="container">
+
+  </div>
+
+</header>
+<div class="container" style="padding-top: 25px">
+<center>
+    <div class="jumbotron">
+  <h2 class="display-4">Let us know about your Disease and we will try to suggest you Something About that :) </h2>
+<form action="" method="post" style="width: 40%">
+        {% csrf_token %}
+    <br>
+    <label>Enter Your Disease</label>
+        <input  class="form-control" type="text" name="disease" placeholder="Enter your Disease" required><br>
+        <input class="btn btn-primary" type="submit" value="Submit">
+    </form>
+        {% if Dis %}
+  <hr class="my-4">
+  <h3>Your Disease: {{Dis.Name}}</h3>
+    <h3>Suggested Doctor: {{Dis.Specialist_Doctor}}</h3>
+    <h3>Suggested Medicines: {{Dis.Suggested_medicine}}</h3>
+    <h3>Doctor's Conatct No.: {{Dis.Specialist_Doctor.number}}</h3>
+    <h3>Doctor's address: {{Dis.Specialist_Doctor.address}}</h3>
+{% if Dis.Specialist_Doctor.number %}
+        <a href="{% url 'appointment' Dis.Specialist_Doctor.number %}"><h2 class="btn btn-primary">Book an Appointment</h2></a>
+        {% endif %}
+        {% endif %}
+
+        {% if error %}
+        <h2>Sorry for your inconvenience, We Don't have Data related to your Disease :(</h2>
+        {% endif %}
+</div>
+</center>
+
+</div>
+
+{% endblock %}

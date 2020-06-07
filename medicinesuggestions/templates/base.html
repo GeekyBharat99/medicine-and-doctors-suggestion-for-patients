@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+
+
+<head>
+	<!-- page title-->
+	<title>Health Care</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!--start theme style -->
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}" media="screen"/>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" media="screen"/>
+	<link rel="stylesheet" href="{% static 'css/font-awesome.css' %}" media="screen"/>
+	<link rel="stylesheet" href="{% static 'css/fonts.css' %}" media="screen"/>
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" media="screen"/>
+	<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}" media="screen"/>
+	<link rel="stylesheet" href="{% static 'css/jquery.bxslider.css' %}" media="screen"/>
+	<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" media="screen"/>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" media="screen"/>
+	<link rel="stylesheet" id="theme-color" type="text/css" href="#"/>
+    <!-- favicon links -->
+    <link rel="shortcut icon" type="image/png" href="favicon.ico">
+</head>
+<body>
+<!--Pre loader start-->
+<div id="preloader">
+	<div class="loading">
+		<svg version="1.2" height="300" width="600" xmlns="http://www.w3.org/2000/svg"
+			viewport="0 0 60 60" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<path id="pulsar" stroke="rgba(0,155,155,1)" fill="none" stroke-width="2"stroke-linejoin="round" d="M0,90L250,90Q257,60 262,87T267,95 270,88 273,92t6,35 7,-60T290,127 297,107s2,-11 10,-10 1,1 8,-10T319,95c6,4 8,-6 10,-17s2,10 9,11h210" />
+		</svg>
+	</div>
+</div>
+
+
+
+
+
+
+
+<!-- Header Start -->
+<div class="hlt_header">
+	<div class="hlt_logo">
+		<a href="index.html"> <img src="{% static 'images/logo_new.png' %}" alt=""> </a>
+	</div>
+	<div class="hlt_uprheader">
+		<div class="hlt_uprleft">
+			<ul>
+				<li><p><span><i class="fa fa-calendar" aria-hidden="true"></i></span> Monday - Friday 08:00-19:00</p></li>
+				<li><p><span><i class="fa fa-map-marker" aria-hidden="true"></i></span> 121 Park Drive , California</p></li>
+			</ul>
+		</div>
+		<div class="hlt_uprright">
+<!--			<ul>-->
+<!--				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>-->
+<!--				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>-->
+<!--				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>-->
+<!--				<li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>-->
+<!--			</ul>-->
+		</div>
+	</div>
+	<div class="hlt_lwrheader">
+		<div class="hlt_uprleft">
+			<ul>
+				<li><p><span><i class="fa fa-ambulance" aria-hidden="true"></i></span> 24 hours emergency & ambulance Service: +(91) 1800-123-12</p></li>
+			</ul>
+		</div>
+		<div class="hlt_manu" id="hs_header">
+			<button type="button" class="hs_nav_toggle navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Menu<i class="fa fa-bars"></i></button>
+			<nav>
+				<ul class="hs_menu collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				  <li><a href="{% url 'home' %}" class="active">Home</a>
+				  </li>
+<!--				  <li><a href="{% url 'about' %}">about</a></li>-->
+<!--				  <li><a href="{% url 'services' %}">services</a>-->
+<!--				  </li>-->
+
+					{% if request.user.is_authenticated %}
+                    <li><a href="{% url 'logout' %}">Logout</a>
+				  </li>
+					{% else %}
+
+                    <li><a href="{% url 'login' %}">Login</a>
+				  </li>
+
+					{% endif %}
+
+					<li><a href="{% url 'signup' %}">Sign Up</a>
+				  </li>
+
+				  <li><a href="{% url 'contact' %}">Contact</a></li>
+					{% if request.user.is_authenticated %}
+				  <li><a href="{% url 'check' %}">CheckUp</a></li>
+					{% endif %}
+					{% if request.user.is_authenticated and request.user.is_staff %}
+				  <li><a href="{% url 'response' %}">Responses</a></li>
+					{% endif %}
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+
+
+
+{% block body %}
+
+
+{% endblock %}
+
+
+
+
+
+
+
+<!-- Footer Section Start -->
+<center>
+	<div class="hlt_footersection">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="widget text-widget">
+					<div class="hlt_ftr_logo">
+						<a><img src="{% static 'images/logo_ftr.png' %}" alt="Footer Logo" /></a>
+						<p>Lorem ipsum dolor sit amet onsectetur adipi sicing elit, sed do eiusmod empor incididunt ut labore et onsectetur adipisicing elit dolore a aliquia. Ut enim ad minim veniam quis nstrud exercitation ullamco.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</center>
+
+<!-- Copyright Section Start -->
+<div class="hlt_copyright">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<p>&copy; Copyright 2020, All Rights Reserved, <a>HEALTHCARE</a></p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Main JS file start-->
+<script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.bxslider.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.mixitup.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/smoothscroll.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/single-0.1.0.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/gmaps.min.js' %}"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+<script type="text/javascript"></script>
+</body>
+</html>

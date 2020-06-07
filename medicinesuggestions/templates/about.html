@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<header id="hs_header">
+  <div class="container">
+
+  </div>
+
+</header>
+
+<div class="hs_page_title">
+  <div class="container">
+    <h3>about us</h3>
+    <ul>
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'about' %}">about us</a></li>
+    </ul>
+  </div>
+</div>
+
+<center>
+  <div class="container">
+<div class="jumbotron">
+  <h1 class="display-4">About Us</h1>
+  <p class="lead">All the dedication, all the administrations, all the consideration. All, for your one.The Health System is intended to build efficiencies and economies of scale; improve quality and results; and grow access to cutting edge essential, strength, and walking care benefits all through a wide clinical system. Wellbeing System is ready to distinguish and react to the wellbeing related requirements of the assorted populaces we serve.We inquire about the most recent treatment techniques and apply them as indicated by severe logical criteria.</p>
+  <hr class="my-4">
+  <p> We are the sole supplier of numerous treatments in India. Patients with mind boggling and different medical issues travel from everywhere throughout the nation and abroad to be treated here.</p>
+
+</div>
+    </div>
+  </center>
+<div class="container">
+  <!--who we are start-->
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <h4 class="hs_heading">Who We Are</h4>
+      <div class="row hs_how_we_are">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="col-lg-7 col-md-6 col-sm-12"> <img src="{% static 'images/about/about1.jpg' %}" alt="" /> </div>
+          <div class="col-lg-5 col-md-6 col-sm-12">
+            <div class="hs_how_we_are_text">
+<center>
+              <h4>The biggest not-revenue driven human services framework.
+
+Today, we're looking toward the eventual fate of human services for everybody—a future we're building together.Known for outstanding patient consideration.</h4></center>
+               </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--who we are end-->
+
+  <!--Health Care Team start-->
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <h4 class="hs_heading">Meet Our Health Care Team</h4>
+      <div class="our_doctor_team">
+        <div id="health_care_team_slider" class="owl-carousel owl-theme">
+          <div class="health_care_team_slider_item"> <img src="{% static 'images/team/team_member4.png' %}" alt="" />
+            <div class="hs_team_member_detail"> <a href="#">
+              <h4>Dr Johnathan Treat</h4>
+              </a>
+              <p>Chairperson</p>
+              <hr>
+              <p>Donec suscipit, nulla nec dapib arcu arcu sodales urna, nec auctor odio </p>
+            </div>
+          </div>
+          <div class="health_care_team_slider_item"> <img src="{% static 'images/team/team_member5.png' %}" alt="" />
+            <div class="hs_team_member_detail"> <a href="#">
+              <h4>Dr Johnathan Treat</h4>
+              </a>
+              <p>Director</p>
+              <hr>
+              <p>Donec suscipit, nulla nec dapib arcu arcu sodales urna, nec auctor odio </p>
+            </div>
+          </div>
+          <div class="health_care_team_slider_item"> <img src="{% static 'images/team/team_member6.png' %}" alt="" />
+            <div class="hs_team_member_detail"> <a href="#">
+              <h4>Dr Johnathan Treat</h4>
+              </a>
+              <p>Head Of Department</p>
+              <hr>
+              <p>Donec suscipit, nulla nec dapib arcu arcu sodales urna, nec auctor odio </p>
+            </div>
+          </div>
+          <div class="health_care_team_slider_item"> <img src="{% static 'images/team/team_member7.png' %}" alt="" />
+            <div class="hs_team_member_detail"> <a href="#">
+              <h4>Dr Johnathan Treat</h4>
+              </a>
+              <p>Surgeon</p>
+              <hr>
+              <p>Donec suscipit, nulla nec dapib arcu arcu sodales urna, nec auctor odio </p>
+            </div>
+          </div>
+          <div class="health_care_team_slider_item"> <img src="{% static 'images/team/team_member4.png' %}" alt="" />
+            <div class="hs_team_member_detail"> <a href="#">
+              <h4>Dr Johnathan Treat</h4>
+              </a>
+              <p>Chairperson</p>
+              <hr>
+              <p>Donec suscipit, nulla nec dapib arcu arcu sodales urna, nec auctor odio </p>
+            </div>
+          </div>
+        </div>
+        <div class="customNavigation text-right"> <a class="btn_prev prev"><i class="fa fa-chevron-left"></i></a> <a class="btn_next next"><i class="fa fa-chevron-right"></i></a> </div>
+      </div>
+    </div>
+  </div>
+  <!--Health Care Team end-->
+
+
+
+
+  <div class="hs_margin_40"></div>
+</div>
+{% endblock %}
